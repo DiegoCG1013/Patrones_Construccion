@@ -1,4 +1,6 @@
-package Ejercicio_1;
+package Ejercicio_1.Constructores;
+
+import Ejercicio_1.Bases.Base;
 
 public class ConstructorBases implements ConstructorBase{
 

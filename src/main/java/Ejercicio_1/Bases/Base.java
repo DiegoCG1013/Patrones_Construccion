@@ -1,4 +1,4 @@
-package Ejercicio_1;
+package Ejercicio_1.Bases;
 
 public class Base {
     private String nombre;

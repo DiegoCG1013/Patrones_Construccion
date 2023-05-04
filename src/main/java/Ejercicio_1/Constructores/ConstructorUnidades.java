@@ -1,4 +1,7 @@
-package Ejercicio_1;
+package Ejercicio_1.Constructores;
+
+import Ejercicio_1.Bases.Base;
+import Ejercicio_1.Bases.UnidadAdministrativa;
 
 public class ConstructorUnidades implements ConstructorUnidadAdministrativa{
     private UnidadAdministrativa unidad;
@@ -30,20 +33,25 @@ public class ConstructorUnidades implements ConstructorUnidadAdministrativa{
         base = new Base();
     }
 
+    public void addBase(Base base) {
+        this.unidad.addBase(base);
+    }
+
     @Override
-    public Base getBase() {
-        Base base = new Base();
+    public UnidadAdministrativa getBase() {
+        UnidadAdministrativa base = unidad;
+
         int tiempoMedio = 0;
         int numAmbulancias = 0;
-        for(Base x : this.unidad.getBases()){
-            tiempoMedio += x.getTiempoMedio();
-            numAmbulancias += x.getNumAmbulancias();
+        for (Base b : unidad.getBases()) {
+            tiempoMedio += b.getTiempoMedio();
+            numAmbulancias += b.getNumAmbulancias();
         }
 
-        base.setTiempoMedio(tiempoMedio/this.unidad.getBases().size());
+        base.setTiempoMedio(tiempoMedio / unidad.getBases().size());
         base.setNumAmbulancias(numAmbulancias);
 
         return base;
-    }
 
+    }
 }

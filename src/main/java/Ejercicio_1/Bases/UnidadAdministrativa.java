@@ -1,13 +1,12 @@
-package Ejercicio_1;
+package Ejercicio_1.Bases;
 
 import java.util.ArrayList;
 
-public class UnidadAdministrativa {
+public class UnidadAdministrativa extends Base {
 
-    private String nombre;
     private ArrayList<Base> bases;
 
-    public UnidadAdministrativa(){
+    public UnidadAdministrativa() {
         this.bases = new ArrayList<>();
     }
 
@@ -17,9 +16,5 @@ public class UnidadAdministrativa {
 
     public ArrayList<Base> getBases() {
         return bases;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
     }
 }
